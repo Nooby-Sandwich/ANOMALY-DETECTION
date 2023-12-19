@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Check Your Plane</title>
+<!-- Add Bootstrap CSS link -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<h1 class="text-center">Check Your Plane</h1>
+
+<form class="container" method="POST" action="/check_plane">
+    <!-- Input fields for all attributes from the dataset -->
+    {% for attribute in attribute_names %}
+    <div class="form-group">
+        <label for="{{ attribute }}">Attribute {{ loop.index }} ({{ attribute }}):</label>
+        <input type="text" class="form-control" id="{{ attribute }}" name="{{ attribute }}" required>
+    </div>
+    {% endfor %}
+    <button type="submit" class="btn btn-primary">Check Plane Anomaly</button>
+</form>
+
+{% if result %}
+<div class="text-center mt-5 {% if result == 'Anomalous' %}text-danger{% else %}text-success{% endif %}">
+{% if result == 'Anomalous' %}
+    <h1 class="display-4">Anomalous (needs checkup)</h1>
+{% else %}
+    <h1 class="display-4">NOT - Anomalous (Safe in range)</h1>
+{% endif %}
+</div>
+
+{% endif %}
+
+<!-- Add Bootstrap JS and jQuery if needed -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

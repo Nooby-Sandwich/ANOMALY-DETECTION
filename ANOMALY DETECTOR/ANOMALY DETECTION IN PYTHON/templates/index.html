@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anomaly Detection</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f0f5ff; /* Change the background color to a comfortable blue shade */
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      form {
+        margin: 0 auto;
+        width: 50%;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      #anomaly-graph,
+      #result {
+        margin: 20px auto;
+        width: 50%;
+      }
+
+      .check-your-plane-button {
+        position: absolute;
+        bottom: 20px;
+        right: 20px; /* Adjust the right position */
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+    <h1>Anomaly Detection</h1>
+
+    <form method="POST">
+        <label for="x-axis">X-Axis Attribute:</label>
+        <input type="text" id="x-axis" name="x-axis" required>
+        <br>
+        <label for="y-axis">Y-Axis Attribute:</label> <!-- Added a space for consistency -->
+        <input type="text" id="y-axis" name="y-axis" required>
+        <br>
+        <input type="submit" value="Plot Graph">
+    </form>
+
+    {% if anomaly_plot %}
+    <h2>Anomaly Graph</h2>
+    <img src="data:image/png;base64,{{ anomaly_plot }}" alt="Anomaly Graph">
+    {% endif %}
+
+    <a href="/check_plane" class="check-your-plane-button">Check Your Plane</a> <!-- Added the "check-your-plane-button" class -->
+</body>
+</html>
