@@ -69,5 +69,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - This project was inspired by the need for anomaly detection in aircraft attribute datasets.
 - Special thanks to the contributors and the open-source community.
-
-```
