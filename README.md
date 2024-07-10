@@ -1,5 +1,3 @@
-Certainly! Below is an example of a README file for your GitHub project. You can include this file in the root directory of your project to provide information about the project, its structure, and how to use it.
-
 ```markdown
 # Aircraft Anomaly Detection
 
@@ -17,6 +15,9 @@ Follow these instructions to get a copy of the project up and running on your lo
 - scikit-learn
 - matplotlib
 - Pycharm
+- html
+- css
+- MS excel
 Install the required Python packages using the following command:
 
 ```bash
