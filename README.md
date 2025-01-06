@@ -170,4 +170,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 
-![System Architecture](./image.png) or ![System Architecture](./image.png)
+![System Architecture](./image.png) 
