@@ -18,6 +18,9 @@ An intelligent web application that leverages machine learning models to detect 
 
 The application follows a modular architecture with clear separation of concerns:
 
+![System Architecture](./image.png)
+
+### Project Structure
 ```
 aircraft-anomaly-detection/
 ├── src/
@@ -167,7 +170,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 - scikit-learn team for machine learning implementations
 - Flask framework developers
 - Aircraft safety research community
-
-
-
-![System Architecture](./image.png) or ![System Architecture](./image.png)
